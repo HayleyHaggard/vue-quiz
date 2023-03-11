@@ -1,8 +1,8 @@
 <template>
   <header>
-    <h4>Question {{ questionStatus }}</h4>
-    <div class="bar">
-      <div class="completion" :style="{ width: barPercentage }"></div>
+    <h4 class="header-title">Question {{ questionStatus }}</h4>
+    <div class="header-bar">
+      <div class="header-completion" :style="{ width: barPercentage }"></div>
     </div>
   </header>
 </template>
@@ -22,19 +22,20 @@ header {
   margin-top: 20px;
 }
 
-header h4 {
+.header-title {
+  margin-bottom: 20px;
   font-size: 30px;
 }
 
-.bar {
-  width: 300px;
-  height: 50px;
-  border: 3px solid bisque;
+.header-bar {
+  width: 100%;
+  height: 10px;
+  border: 3px solid rgb(207, 141, 255);
 }
 
-.completion {
+.header-completion {
   height: 100%;
-  width: 30%;
-  background-color: bisque;
+  width: 0%;
+  background-color: rgb(207, 141, 255);
 }
 </style>

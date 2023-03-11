@@ -1,10 +1,15 @@
 <template>
   <div>
-    <header>
-      <h1>Quizes</h1>
-      <input v-model.trim="search" type="text" placeholder="Search..." />
+    <header class="header">
+      <h1 class="header-title">Quizes</h1>
+      <input
+        class="header-input"
+        v-model.trim="search"
+        type="text"
+        placeholder="Search..."
+      />
     </header>
-    <div class="options-container">
+    <div class="cards-container">
       <My-card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
     </div>
   </div>
@@ -26,28 +31,32 @@ watch(search, () => {
 </script>
 
 <style scoped>
-header {
+.header {
   margin-bottom: 10px;
   margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
-header h1 {
+.header-title {
   margin-right: 30px;
   font-weight: bold;
 }
 
-header input {
-  border: none;
-  background-color: rgba(128, 128, 128, 0.1);
+.header-input {
   padding: 10px;
+  width: 500px;
+  background-color: rgba(128, 128, 128, 0.1);
   border-radius: 5px;
+  border: none;
 }
 
-.options-container {
-  display: flex;
-  flex-wrap: wrap;
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 25px;
   margin-top: 40px;
 }
 </style>

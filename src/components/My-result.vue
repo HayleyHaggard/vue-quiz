@@ -1,8 +1,10 @@
 <template>
   <div class="results">
-    <p></p>
-    <h1>{{ finalResults }}</h1>
-    <router-link :to="{ name: 'quizes' }">Go Back</router-link>
+    <p class="results-text">Your results...</p>
+    <h1 class="results-title">{{ finalResults }}</h1>
+    <router-link class="results-link" :to="{ name: 'quizes' }"
+      >Go back</router-link
+    >
   </div>
 </template>
 
@@ -26,11 +28,21 @@ const finalResults = computed(() => {
   text-align: center;
   padding: 100px 0;
 }
-p {
+
+.results-text {
   font-size: 25px;
 }
 
-h1 {
+.results-title {
+  margin-bottom: 40px;
   font-size: 90px;
+}
+
+.results-link {
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 5px;
+  color: black;
+  background-color: rgb(244, 239, 239);
 }
 </style>

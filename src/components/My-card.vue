@@ -1,9 +1,9 @@
 <template>
   <div class="card" @click="navigateToQuiz">
-    <img :src="quiz.img" alt="" />
+    <img class="card-img" :src="quiz.img" alt="" />
     <div class="card-text">
-      <h2>{{ quiz.name }}</h2>
-      <p>{{ quiz.questions.length }} questions</p>
+      <h2 class="card-title">{{ quiz.name }}</h2>
+      <p class="card-questions">{{ quiz.questions.length }} questions</p>
     </div>
   </div>
 </template>
@@ -23,26 +23,23 @@ const navigateToQuiz = () => {
 
 <style scoped>
 .card {
-  width: 310px;
-  overflow: hidden;
   border-radius: 2%;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 35px;
-  margin-right: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   cursor: pointer;
 }
 
-.card img {
-  width: 100%;
-  height: 190px;
+.card-img {
   margin: 0;
+  height: 190px;
+  width: 100%;
 }
 
-.card .card-text {
-  padding: 0 5px;
+.card-text {
+  padding: 15px;
 }
 
-.card .card-text h2 {
+.card-title {
   font-weight: bold;
 }
 </style>

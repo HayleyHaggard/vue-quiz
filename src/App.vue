@@ -7,9 +7,13 @@
 <script></script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
 .container {
-  max-width: 1000px;
+  font-family: "Tilt Neon", cursive;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 html {

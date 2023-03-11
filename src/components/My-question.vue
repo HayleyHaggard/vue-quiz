@@ -1,13 +1,13 @@
 <template>
   <div class="question-container">
-    <h1 class="question">{{ question.text }}</h1>
+    <h1 class="question-text">{{ question.text }}</h1>
   </div>
-  <div class="options-container">
+  <div class="option-container">
     <div
       v-for="option in question.options"
       :key="option.id"
       @click="emitSelectedOption(option.isCorrect)"
-      class="option"
+      class="option-box"
     >
       <p class="option-label">{{ option.label }}</p>
       <div class="option-value">
@@ -35,25 +35,25 @@ const emitSelectedOption = (isCorrect) => {
   margin-top: 20px;
 }
 
-.question {
-  font-size: 40px;
+.question-text {
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
-.option {
+.option-box {
   display: flex;
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 .option-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
-  background-color: bisque;
+  background-color: rgb(207, 141, 255);
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .option-value {
