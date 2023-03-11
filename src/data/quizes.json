@@ -190,6 +190,36 @@
             "isCorrect": false
           }
         ]
+      },
+      {
+        "id": 4,
+        "text": "The cones see ___ while the rods see ___",
+        "options": [
+          {
+            "id": 1,
+            "label": "A",
+            "text": "black and white; color",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "label": "B",
+            "text": "color; black and white",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "label": "C",
+            "text": "3D objects; 2D shapes",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "label": "D",
+            "text": "2D shapes; 3D objects",
+            "isCorrect": false
+          }
+        ]
       }
     ]
   },
