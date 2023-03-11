@@ -3,7 +3,12 @@
     <h1 class="question">{{ question.text }}</h1>
   </div>
   <div class="options-container">
-    <div v-for="option in question.options" :key="option.id" class="option">
+    <div
+      v-for="option in question.options"
+      :key="option.id"
+      @click="emitSelectedOption(option.isCorrect)"
+      class="option"
+    >
       <p class="option-label">{{ option.label }}</p>
       <div class="option-value">
         <p>{{ option.text }}</p>
@@ -13,10 +18,16 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, defineEmits } from "vue";
 
 // eslint-disable-next-line vue/no-setup-props-destructure
 const { question } = defineProps(["question"]);
+
+const emit = defineEmits(["selectOption"]);
+
+const emitSelectedOption = (isCorrect) => {
+  emit("selectOption", isCorrect);
+};
 </script>
 
 <style scoped>
